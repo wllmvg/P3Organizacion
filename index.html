@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<!-- Lenguaje -->
+<html lang="es">
+<!-- Cabecera de la página -->
+<head>
+    <!-- Impirmir caracteres especiales como la ñ -->   
+    <meta charset="UTF-8">
+    <!-- Adaptación a las resoluciones de pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Declaracion de estilos -->
+    <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.3.0.css">
+
+    <!-- Declaracion de scrips jquery y adicionales -->
+    <script type="text/javascript" charset="utf-8" src="jquery/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile-1.3.0.js"></script>
+</head>
+<style>
+
+.container {
+    max-width: 100%; 
+    overflow: hidden; 
+}
+body, html {
+    overflow: hidden; 
+}
+</style>
+
+<body> 
+<!-- Versión 1.0 ORGANIZACION DE COMPUTADORES APP -->
+<!-- Por: Jeison M. Delgado G. -->
+<!-- Remasterizado por: William F. Melgarejo V.-->
+<!-- Start of first page -->
+<div data-role="page" id="inicio">
+
+    <div data-role="header" data-theme="a">
+        <h1>UNIVERSIDAD DE SANTANDER</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <center>
+            <img src="img/odpcs123.gif" style="border-radius: 5px; width: 360px;">
+            <h2>Organización de Computadores</h2>  
+        </center> 
+        <center>
+            <table style="width: 60%; margin: 0 auto; border: 1px solid #ccc;">
+                <tr>
+                    <td style="padding: 20px; text-align: center;">
+                        <p>Página interactiva de apoyo para la asignatura de <b>Organización de Computadores</b>.</p>
+                        <p>Mediante este menú de opciones, tendrás la oportunidad de <b>explorar y profundizar</b> en los conceptos tratados en clase.</p>
+                        <p>El propósito es ofrecer un espacio donde se puedan seleccionar los temas que desees <b>repasar y fortalecer</b> según lo que necesites para aprender.</p>
+                    </td>
+                </tr>
+            </table>
+        </center>
+        
+        <br>
+        <center>
+            <a href="#menu" data-role="button" data-icon="check" data-iconpos="right" data-theme="a" data-inline="true"> INICIAR </a>
+        </center>
+        <br>
+    </div><!-- /content -->
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+</div><!-- /page -->
+<!-- End of first page -->
+
+<!-- Start of second page -->
+<div data-role="page" id="menu">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /header -->
+
+    <div data-role="content" data-theme="a">   
+        <center>
+            <h1>Menú</h1>
+            <p>Selecciona la opción que necesites</p>
+            <br>
+        </center>
+        <ul data-role="listview" data-inset="false" data-filter="false">
+            <li><a href="#pag1">Estructura y Funcionamiento de la Máquina Abacus</a></li>
+            <li><a href="#pag2">Características de la Máquina Super Abacus</a></li>
+            <li><a href="#pag3">Arquitectura de Von Neumann</a></li>
+            <li><a href="#pag4">Memoria Principal y Memoria Secundaria</a></li>
+            <li><a href="#pag5">Unidades de Almacenamiento</a></li>
+            <li><a href="#pag6">Ciclo de Instrucción del Procesador</a></li>
+            <li><a href="#pag7">Evaluación y Pruebas</a></li>  
+            <li><a href="#pag8">Tendencias Futuras en la Organización de Computadores</a></li>  
+            <li><a href="#pag9">Bibliografía</a></li>            
+        </ul>
+    </div><!-- /content -->
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div><!-- /page -->
+
+<!-- End of second page -->
+
+
+<!--PAGINA DE ABACUS-->
+
+<div data-role="page" id="pag1">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a">
+        <center>
+            <img src="img/abacus.png" style="border-radius: 5px; width: 360px;">
+            <h2>Estructura y Funcionamiento de la Máquina Abacus</h2>  
+        </center> 
+        <p>La <strong>Máquina Abacus</strong> es un modelo teórico de computadora que se utiliza en la enseñanza de los principios de la informática. Este modelo simula una computadora simple de un solo acumulador, lo que significa que todas las operaciones aritméticas y lógicas se realizan en un único registro, conocido como el <em>acumulador</em>.</p>
+
+        <h3>1. Estructura de la Máquina Abacus</h3>
+        <ul>
+            <li><strong>Memoria</strong>: Almacena las instrucciones y los datos de manera secuencial.</li>
+            <li><strong>Acumulador</strong>: El registro principal donde se realizan las operaciones.</li>
+            <li><strong>Unidad de Control (UC)</strong>: Coordina la ejecución de las instrucciones.</li>
+            <li><strong>Bus de datos</strong>: Permite el movimiento de información entre los componentes.</li>
+        </ul>
+
+        <h3>2. Funcionamiento de la Máquina Abacus</h3>
+        <p>El funcionamiento de la máquina se basa en una secuencia de operaciones contra el acumulador. Las instrucciones se ejecutan de la siguiente manera:</p>
+        <ul>
+            <li><strong>Carga de datos al acumulador</strong>: La instrucción <code>LOAD</code> permite cargar un valor de la memoria al acumulador.</li>
+            <li><strong>Operaciones aritméticas</strong>: Instrucciones como <code>ADD</code>, <code>SUB</code>, <code>MUL</code> y <code>DIV</code> realizan cálculos usando el acumulador.</li>
+            <li><strong>Almacenamiento de resultados</strong>: El comando <code>STORE</code> guarda el valor del acumulador en la memoria.</li>
+            <li><strong>Control de flujo</strong>: La instrucción <code>JUMP</code> cambia la dirección de ejecución.</li>
+        </ul>
+
+        <h3>3. Concepto de Operaciones contra el Acumulador</h3>
+        <p>El término <em>operaciones contra el acumulador</em> se refiere a la realización de operaciones directamente en el acumulador. Por ejemplo:</p>
+        <ul>
+            <li><code>ADD X</code>: Suma el valor de la posición <code>X</code> de la memoria al acumulador.</li>
+            <li><code>SUB Y</code>: Resta el valor de la posición <code>Y</code> al acumulador.</li>
+        </ul>
+
+        <h3>4. Máquina de Una Sola Dirección</h3>
+        <p>La Máquina Abacus se considera de una sola dirección porque las instrucciones y datos se almacenan en una única secuencia de memoria, avanzando linealmente a menos que una instrucción <code>JUMP</code> altere el flujo.</p>
+    </div>
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+</div>
+
+<!--PAGINA CARACT. ABACUS-->
+<div data-role="page" id="pag2">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a">  
+        <center>
+            <img src="img/2.png" style="border-radius: 5px; width: 360px;">
+            <h2>Características de la Máquina Super Abacus</h2>  
+        </center> 
+        <p>La <strong>Máquina Super Abacus</strong> es un modelo teórico de computadora de tercera generación que representa una evolución significativa en el uso de registros y capacidades de direccionamiento en comparación con la Máquina Abacus. Mientras que la Máquina Abacus utiliza un solo acumulador, la Super Abacus incorpora múltiples registros generales, lo que permite realizar operaciones aritméticas y lógicas más complejas de manera más eficiente.</p>
+
+        <h3>1. Uso de Registros Generales</h3>
+        <p>A diferencia de la Máquina Abacus, que tiene un único acumulador, la <strong>Máquina Super Abacus</strong> emplea varios registros para almacenar datos y realizar operaciones. Estos registros generales pueden ser utilizados tanto para almacenar valores intermedios como para efectuar cálculos sin necesidad de sobrescribir el valor almacenado en el acumulador principal. Esto permite un mayor control sobre las operaciones y una mayor flexibilidad en la ejecución de programas.</p>
+
+        <h3>2. Ciclo de Memoria</h3>
+        <p>El ciclo de memoria en la <strong>Super Abacus</strong> es más avanzado en comparación con su predecesora. Este ciclo permite que se realicen accesos más rápidos a los datos almacenados en memoria y se gestionen múltiples operaciones de manera simultánea. Esto se logra gracias a la utilización de registros adicionales y una mayor capacidad para realizar operaciones en paralelo.</p>
+
+        <h3>3. Diferencias con la Máquina Abacus</h3>
+        <p>La <strong>Máquina Super Abacus</strong> presenta varias mejoras respecto a la Máquina Abacus original:</p>
+        <ul>
+            <li><strong>Registros múltiples:</strong> Mientras que la Máquina Abacus solo tiene un acumulador, la Super Abacus utiliza varios registros para almacenar y procesar datos.</li>
+            <li><strong>Mayor capacidad de direccionamiento:</strong> La Máquina Super Abacus puede direccionar múltiples ubicaciones de memoria al mismo tiempo, lo que mejora la eficiencia de los cálculos.</li>
+            <li><strong>Mayor rapidez en el ciclo de memoria:</strong> Gracias a sus registros adicionales y un ciclo de memoria optimizado, la Super Abacus es más rápida en sus operaciones.</li>
+        </ul>
+
+        <h3>4. Aplicaciones y Mejoras</h3>
+        <p>La <strong>Máquina Super Abacus</strong> es una representación más avanzada de los principios computacionales que se pueden encontrar en las generaciones modernas de computadoras. Su capacidad para manejar registros generales y realizar operaciones más complejas la hace una herramienta educativa valiosa para entender las bases de las arquitecturas de computadoras de mayor rendimiento.</p>
+    </div>
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+
+
+<div data-role="page" id="pag3">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a">  
+        <center>
+            <img src="img/3.png" style="border-radius: 5px; width: 360px;">
+            <h2>Arquitectura de Von Neumann</h2>  
+        </center> 
+        <p>La <strong>Arquitectura de Von Neumann</strong> es un modelo fundamental en el diseño de computadoras modernas. Desarrollada por John Von Neumann en la década de 1940, esta arquitectura ha sido la base sobre la que se han construido casi todas las computadoras modernas. Su concepto se basa en la idea de que tanto las instrucciones del programa como los datos pueden almacenarse en la misma memoria.</p>
+
+        <h3>1. Principios Fundamentales</h3>
+        <p>La Arquitectura de Von Neumann se basa en cinco componentes clave:</p>
+        <ul>
+            <li><strong>Unidad de Control (UC):</strong> Se encarga de interpretar las instrucciones del programa y dirigir la operación de la computadora.</li>
+            <li><strong>Unidad Aritmético-Lógica (ALU):</strong> Realiza las operaciones matemáticas y lógicas sobre los datos.</li>
+            <li><strong>Memoria:</strong> Almacena tanto las instrucciones del programa como los datos. En este modelo, se utiliza una memoria unificada, lo que significa que no hay distinción entre la memoria de datos y la memoria de instrucciones.</li>
+            <li><strong>Entrada/Salida (E/S):</strong> Facilita la interacción con el exterior, permitiendo a la computadora recibir información (entrada) y enviar resultados (salida).</li>
+            <li><strong>Registros:</strong> Son pequeños espacios de almacenamiento dentro de la CPU que se utilizan para almacenar datos y direcciones durante las operaciones.</li>
+        </ul>
+
+        <h3>2. Ciclo de Instrucción</h3>
+        <p>El ciclo de instrucción es el proceso mediante el cual la computadora ejecuta un programa. En la Arquitectura de Von Neumann, el ciclo de instrucción sigue estos pasos:</p>
+        <ul>
+            <li><strong>Obtención de la instrucción:</strong> La unidad de control recupera la siguiente instrucción de la memoria.</li>
+            <li><strong>Decodificación de la instrucción:</strong> La unidad de control interpreta la instrucción obtenida para saber qué operación realizar.</li>
+            <li><strong>Ejecutar la instrucción:</strong> La unidad aritmético-lógica (ALU) ejecuta la operación indicada por la instrucción.</li>
+            <li><strong>Almacenamiento:</strong> Si es necesario, los resultados de la operación se almacenan nuevamente en la memoria o en los registros.</li>
+        </ul>
+
+        <h3>3. Impacto en los Computadores Modernos</h3>
+        <p>La <strong>Arquitectura de Von Neumann</strong> ha sido crucial en la evolución de las computadoras. Su diseño permitió la creación de sistemas más flexibles, ya que las instrucciones y los datos se almacenan en la misma memoria, lo que facilita la manipulación de programas más complejos. Sin embargo, también presenta limitaciones, como el <strong>cuello de botella de Von Neumann</strong>, que ocurre cuando el acceso a la memoria es más lento que la ejecución de las instrucciones.</p>
+
+        <h3>4. Estructura Unificada de Memoria</h3>
+        <p>Una de las características distintivas de la arquitectura de Von Neumann es su <strong>estructura unificada de memoria</strong>, donde tanto los datos como las instrucciones se almacenan en el mismo espacio de memoria. Esto simplifica el diseño, pero también puede generar problemas de rendimiento debido a la competencia entre las instrucciones y los datos por el acceso a la memoria.</p>
+    </div>
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+
+
+<div data-role="page" id="pag4">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a">  
+        <center>
+            <img src="img/4.jpg" style="border-radius: 5px; width: 360px;">
+            <h2>Memoria Principal y Memoria Secundaria</h2>  
+        </center> 
+        <p>En esta sección, se exploran las diferencias entre la memoria principal y la memoria secundaria, los dos tipos clave de almacenamiento en un sistema informático. Cada uno juega un papel fundamental en el rendimiento y funcionamiento de la computadora.</p>
+
+        <h3>1. Memoria Principal</h3>
+        <p>La <strong>memoria principal</strong>, también conocida como RAM (Random Access Memory), es el área de almacenamiento más rápida y directamente accesible para la CPU. Su función principal es almacenar los datos y programas que están siendo procesados por la computadora en un momento dado. Algunas características clave de la memoria principal son:</p>
+        <ul>
+            <li><strong>Volatilidad:</strong> La memoria RAM es volátil, lo que significa que los datos se pierden cuando la computadora se apaga.</li>
+            <li><strong>Alta velocidad:</strong> La RAM tiene tiempos de acceso muy rápidos, lo que permite un procesamiento eficiente y rápido de las tareas.</li>
+            <li><strong>Capacidad limitada:</strong> A pesar de su velocidad, la cantidad de RAM en un sistema suele ser limitada en comparación con el almacenamiento secundario.</li>
+        </ul>
+
+        <h3>2. Memoria Secundaria</h3>
+        <p>La <strong>memoria secundaria</strong> se utiliza para almacenar grandes volúmenes de datos de forma permanente. A diferencia de la memoria principal, la memoria secundaria no es volátil, lo que significa que los datos permanecen allí incluso cuando la computadora se apaga. Los dispositivos más comunes de memoria secundaria son los discos duros (HDD), las unidades de estado sólido (SSD) y los discos ópticos. Las principales características de la memoria secundaria incluyen:</p>
+        <ul>
+            <li><strong>No volatilidad:</strong> Los datos no se pierden cuando se apaga el sistema.</li>
+            <li><strong>Baja velocidad:</strong> Aunque los dispositivos de memoria secundaria ofrecen un almacenamiento mucho mayor que la RAM, su velocidad de acceso es más baja.</li>
+            <li><strong>Capacidad mayor:</strong> Los dispositivos de memoria secundaria tienen una capacidad de almacenamiento mucho mayor que la memoria principal, lo que permite almacenar grandes cantidades de información a largo plazo.</li>
+        </ul>
+
+        <h3>3. Diferencias Clave</h3>
+        <p>Las diferencias más importantes entre la memoria principal y la memoria secundaria son:</p>
+        <ul>
+            <li><strong>Velocidad:</strong> La memoria principal es mucho más rápida que la memoria secundaria.</li>
+            <li><strong>Capacidad:</strong> La memoria secundaria tiene una capacidad mucho mayor que la memoria principal.</li>
+            <li><strong>Persistencia:</strong> La memoria principal es volátil, mientras que la memoria secundaria no lo es.</li>
+        </ul>
+
+        <h3>4. Impacto en el Rendimiento del Sistema</h3>
+        <p>El rendimiento de un sistema informático depende en gran medida de la memoria principal y secundaria. La cantidad y velocidad de la memoria RAM afecta directamente a la capacidad de la computadora para manejar múltiples tareas simultáneamente. Por otro lado, la memoria secundaria, al ser más lenta, influye en el tiempo que tarda en acceder a los datos almacenados, pero es esencial para el almacenamiento a largo plazo de archivos, programas y otros datos.</p>
+    </div>
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+
+
+<div data-role="page" id="pag5">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a">  
+        <center>
+            <img src="img/5.jpg" style="border-radius: 5px; width: 360px;">
+            <h2>Unidades de Almacenamiento</h2>  
+        </center> 
+        <p>Las unidades de almacenamiento son componentes esenciales de cualquier sistema informático, utilizadas para guardar datos de forma permanente o temporal. Existen diversos tipos de unidades de almacenamiento, cada una con características únicas que afectan al rendimiento general de un sistema.</p>
+
+        <h3>1. Discos Duros (HDD)</h3>
+        <p>Los <strong>discos duros</strong> (HDD - Hard Disk Drives) son dispositivos de almacenamiento que utilizan discos magnéticos giratorios para leer y escribir datos. A pesar de ser más lentos en comparación con las unidades SSD, los discos duros siguen siendo populares debido a su mayor capacidad a un costo menor. Sus principales características incluyen:</p>
+        <ul>
+            <li><strong>Capacidad alta:</strong> Pueden ofrecer grandes capacidades de almacenamiento, ideales para almacenar grandes volúmenes de datos.</li>
+            <li><strong>Velocidad más baja:</strong> El tiempo de acceso a los datos es más lento que en las unidades SSD debido a su naturaleza mecánica.</li>
+            <li><strong>Costo más bajo:</strong> Los discos duros son más asequibles, lo que los convierte en una opción económica para usuarios con necesidades de almacenamiento masivo.</li>
+        </ul>
+
+        <h3>2. Unidades de Estado Sólido (SSD)</h3>
+        <p>Las <strong>unidades SSD</strong> (Solid State Drives) son dispositivos de almacenamiento basados en memoria flash que no contienen partes móviles, lo que les permite acceder a los datos de manera mucho más rápida que los discos duros. Las principales ventajas de los SSD incluyen:</p>
+        <ul>
+            <li><strong>Velocidad rápida:</strong> Los SSDs ofrecen tiempos de acceso más rápidos, lo que mejora significativamente el rendimiento del sistema, especialmente en el arranque del sistema operativo y la carga de aplicaciones.</li>
+            <li><strong>Menor consumo de energía:</strong> Los SSD consumen menos energía que los HDD, lo que los hace ideales para dispositivos portátiles como laptops.</li>
+            <li><strong>Mayor durabilidad:</strong> Al no tener partes móviles, los SSD son más resistentes a golpes y vibraciones.</li>
+        </ul>
+
+        <h3>3. Discos Ópticos</h3>
+        <p>Los <strong>discos ópticos</strong>, como los CDs, DVDs y Blu-rays, son medios de almacenamiento que utilizan láseres para leer y escribir datos. Aunque no son tan rápidos ni tienen tanta capacidad como los HDD o SSD, siguen siendo útiles para la distribución de contenido, almacenamiento a largo plazo y copias de seguridad. Sus características incluyen:</p>
+        <ul>
+            <li><strong>Baja capacidad:</strong> Los discos ópticos tienen una capacidad de almacenamiento relativamente baja en comparación con otros medios.</li>
+            <li><strong>Baja velocidad:</strong> La velocidad de acceso y transferencia de datos es mucho más lenta que en los HDD y SSD.</li>
+            <li><strong>Durabilidad a largo plazo:</strong> Aunque más lentos, los discos ópticos son una opción confiable para el almacenamiento a largo plazo debido a su resistencia a las condiciones ambientales.</li>
+        </ul>
+
+        <h3>4. Unidades Flash USB</h3>
+        <p>Las <strong>unidades Flash USB</strong> son pequeños dispositivos de almacenamiento portátiles que utilizan memoria flash para almacenar datos. Son muy populares debido a su portabilidad y facilidad de uso. Características clave:</p>
+        <ul>
+            <li><strong>Portabilidad:</strong> Son fáciles de transportar y se utilizan comúnmente para transferir archivos entre computadoras.</li>
+            <li><strong>Velocidad variable:</strong> La velocidad de acceso puede variar según la marca y modelo de la unidad.</li>
+            <li><strong>Capacidad moderada:</strong> Aunque ofrecen una capacidad moderada de almacenamiento, no son comparables a los HDD o SSD en términos de tamaño.</li>
+        </ul>
+
+        <h3>5. Impacto en el Rendimiento</h3>
+        <p>La elección de la unidad de almacenamiento tiene un impacto directo en el rendimiento general del sistema. Un SSD, por ejemplo, proporcionará tiempos de arranque más rápidos y acceso más veloz a las aplicaciones en comparación con un HDD. Sin embargo, los discos duros siguen siendo una opción viable para quienes necesitan grandes cantidades de almacenamiento a un costo más bajo. La combinación de una unidad SSD para el sistema operativo y un HDD para almacenamiento masivo es una estrategia comúnmente utilizada para equilibrar velocidad y capacidad.</p>
+    </div>
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+
+
+<div data-role="page" id="pag6">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a">  
+        <center>
+            <img src="img/6.webp" style="border-radius: 5px; width: 360px;">
+            <h2>Ciclo de Instrucción del Procesador</h2>  
+        </center> 
+        <p>El ciclo de instrucción es el proceso fundamental que realiza un procesador para ejecutar un programa. Este ciclo se repite constantemente durante la ejecución de cualquier programa informático, permitiendo que el procesador realice operaciones complejas a partir de simples instrucciones.</p>
+
+        <h3>Fases del Ciclo de Instrucción</h3>
+        <p>El ciclo de instrucción se divide en varias fases clave, cada una de las cuales tiene un papel importante en el procesamiento de las instrucciones. A continuación, se detallan las etapas del ciclo:</p>
+
+        <h4>1. Búsqueda de Instrucción (Fetch)</h4>
+        <p>En esta fase, el procesador obtiene la instrucción que debe ejecutar desde la memoria. La dirección de la instrucción se encuentra almacenada en el contador de programa (PC, Program Counter). El procesador lee la instrucción desde la memoria principal, y luego la almacena en el registro de instrucción (IR, Instruction Register) para su posterior procesamiento.</p>
+
+        <h4>2. Decodificación de la Instrucción (Decode)</h4>
+        <p>Una vez que la instrucción ha sido recuperada, el procesador debe entender lo que debe hacer con ella. En esta fase, la instrucción se decodifica, es decir, se identifica el tipo de operación a realizar (como una suma, una carga de datos, etc.) y se identifican los operandos necesarios para llevarla a cabo. Esta etapa suele involucrar unidades de control que organizan los recursos del procesador.</p>
+
+        <h4>3. Ejecución de la Instrucción (Execute)</h4>
+        <p>En la fase de ejecución, el procesador realiza la operación indicada por la instrucción. Esto puede implicar cálculos matemáticos, operaciones lógicas o transferencias de datos entre registros o memoria. El resultado de la operación se almacena en el registro de salida o en la memoria, según sea necesario.</p>
+
+        <h4>4. Acceso a Memoria (Memory Access)</h4>
+        <p>En esta fase, si la instrucción requiere acceder a la memoria (por ejemplo, leer o escribir datos), se realiza la operación de lectura o escritura en la memoria principal. Dependiendo de la instrucción, esto puede implicar cargar datos en registros o guardar resultados en la memoria.</p>
+
+        <h4>5. Escritura de Resultados (Write-back)</h4>
+        <p>Finalmente, en la fase de escritura, el procesador almacena los resultados de la operación en los registros o en la memoria. Esta es la última fase del ciclo, que prepara el procesador para la siguiente instrucción.</p>
+
+        <p>Estas fases se repiten continuamente en un ciclo, lo que permite que el procesador ejecute un conjunto de instrucciones. Cada ciclo puede ejecutarse a una velocidad muy alta, lo que permite que los procesadores modernos realicen millones de operaciones por segundo.</p>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+
+
+<style>
+    /* Asegurar que el body y los contenedores puedan desplazarse */
+    body, html {
+        height: 100%;
+        margin: 0;
+        overflow-y: auto;
+    }
+    .content {
+        padding: 20px;
+    }
+    #respuesta1, #respuesta2, #respuesta3, #respuesta4, #respuesta5, #respuesta6, #respuesta7, #respuesta8, #respuesta9, #respuesta10 {
+        display: none;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    table, th, td {
+        border: 1px solid #000;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #272727;
+    }
+</style>
+
+<div data-role="page" id="pag7">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a" class="content">  
+        <center>
+            <img src="img/7.png" style="border-radius: 5px; width: 360px;">
+            <h2>Evaluación y Pruebas</h2>  
+        </center> 
+        <p>Las evaluaciones y pruebas son una parte importante para ver qué tanto hemos aprendido. A través de estas, podemos ver cómo estamos manejando los temas y mejorar lo que necesitemos.</p>
+
+        <h3>Tipos de Pruebas Incluidas:</h3>
+         
+        <center><h4>Ejercicio de Apareamiento</h4></center>
+        <p>Debes conectar los conceptos importantes. Tienes dos columnas, una con términos y otra con definiciones, y tienes que emparejarlas correctamente.</p>
+
+        <table>
+            <tr>
+                <th>Columna A</th>
+                <th>Columna B</th>
+            </tr>
+            <tr>
+                <td>A) Memoria Caché</td>
+                <td>1) Es donde guardamos los archivos y programas a largo plazo.</td>
+            </tr>
+            <tr>
+                <td>B) CPU</td>
+                <td>2) Almacena temporalmente los datos mientras se usan.</td>
+            </tr>
+            <tr>
+                <td>C) Disco Duro</td>
+                <td>3) Se usa para ejecutar los programas.</td>
+            </tr>
+        </table>
+
+        <button onclick="toggleRespuesta('respuesta1')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta1" style="display:none;"><b>Respuesta correcta:</b> A-2, B-3, C-1</p>
+        
+<br>
+<hr>
+<br>
+                
+<center><h4>Preguntas de Opción Múltiple</h4></center>
+        <p>¿Cuál es el componente de la computadora que se encarga de hacer los cálculos y ejecutar los programas?</p>
+        <ul>
+            <li>A) Memoria RAM</li>
+            <li>B) CPU</li>
+            <li>C) Disco Duro</li>
+            <li>D) Tarjeta Gráfica</li>
+        </ul>
+        <button onclick="toggleRespuesta('respuesta2')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta2" style="display:none;"><b>Respuesta correcta:</b> B) CPU</p>
+        
+<br>
+<hr>
+<br>
+                
+<center><h4>Problema de Análisis</h4></center>
+    
+        <p>Estás trabajando en tu computadora y necesitas abrir un archivo guardado en tu disco duro. Sin embargo, tu computadora se apagó y no puedes acceder a la información. ¿Qué dispositivo utilizarías para solucionar esto?</p>
+        <ul>
+            <li>A) Memoria RAM</li>
+            <li>B) Disco Duro</li>
+            <li>C) Memoria Caché</li>
+        </ul>
+        <button onclick="toggleRespuesta('respuesta3')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta3" style="display:none;"><b>Respuesta correcta:</b> B) Disco Duro. El disco duro es donde se guardan los archivos a largo plazo, por lo que es el que nos sirve para este caso.</p>
+                
+<br>
+<hr>
+<br>
+
+<center><h4>Ejercicio de Relacionar Conceptos</h4></center>
+        <p>Relaciona las siguientes palabras con sus respectivas definiciones.</p>
+
+        <table>
+            <tr>
+                <th>Columna A</th>
+                <th>Columna B</th>
+            </tr>
+            <tr>
+                <td>A) Tarjeta Gráfica</td>
+                <td>1) Se usa para ejecutar los programas.</td>
+            </tr>
+            <tr>
+                <td>B) Procesador</td>
+                <td>2) Almacena temporalmente los datos mientras se usan.</td>
+            </tr>
+            <tr>
+                <td>C) Memoria Caché</td>
+                <td>3) Procesa y muestra los gráficos.</td>
+            </tr>
+        </table>
+
+        <button onclick="toggleRespuesta('respuesta4')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta4" style="display:none;"><b>Respuesta correcta:</b> A-3, B-1, C-2</p>
+        
+<br>
+<hr>
+<br>
+                
+<center><h4>Pregunta Verdadero o Falso</h4></center>
+        <p>La memoria RAM es donde se almacenan permanentemente los archivos de la computadora.</p>
+        <ul>
+            <li>A) Verdadero</li>
+            <li>B) Falso</li>
+        </ul>
+        <button onclick="toggleRespuesta('respuesta5')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta5" style="display:none;"><b>Respuesta correcta:</b> B) Falso. La memoria RAM es volátil y almacena temporalmente los datos mientras se usan.</p>
+                
+<br>
+<hr>
+<br>
+
+<center><h4>Ejercicio de Selección de Imagen</h4></center>
+        <p>Selecciona la imagen que representa el componente de la computadora encargado de mostrar los gráficos.</p>
+        <ul>
+            <li>A) <img src="img/ram.png" alt="RAM" style="width:50px;"> </li>
+            <li>B) <img src="img/cpu.png" alt="CPU" style="width:50px;"> </li>
+            <li>C) <img src="img/gpu.png" alt="GPU" style="width:50px;"> </li>
+        </ul>
+        <button onclick="toggleRespuesta('respuesta6')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta6" style="display:none;"><b>Respuesta correcta:</b> C) GPU. La GPU es la tarjeta gráfica que maneja los gráficos y videos.</p>
+        
+<br>
+<hr>
+<br>
+
+<center><h4>Ejercicio de Completar la Definición</h4></center>
+        <p>Completa la siguiente definición: "El ________ es el componente que permite la comunicación entre el procesador y la memoria." </p>
+        <ul>
+            <li>A) Bus de Datos</li>
+            <li>B) Puente Norte</li>
+            <li>C) Chipset</li>
+        </ul>
+        <button onclick="toggleRespuesta('respuesta7')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta7" style="display:none;"><b>Respuesta correcta:</b> B) Puente Norte. El puente norte conecta el procesador con la memoria.</p>
+<br>
+<hr>
+<br>
+<center><h4>Ejercicio de Secuencia Lógica</h4></center>
+        <p>¿Qué componente de la computadora debe activarse primero al encenderla?</p>
+        <ul>
+            <li>A) Memoria RAM</li>
+            <li>B) Unidad de Arranque</li>
+            <li>C) Disco Duro</li>
+        </ul>
+        <button onclick="toggleRespuesta('respuesta8')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta8" style="display:none;"><b>Respuesta correcta:</b> B) Unidad de Arranque. La unidad de arranque se activa primero para iniciar el proceso de arranque del sistema.</p>
+
+<br>
+<hr>
+<br>
+
+<center><h4>Ejercicio de Relación de Conceptos</h4></center>
+        <p>Relaciona correctamente las palabras con sus definiciones.</p>
+
+        <table>
+            <tr>
+                <th>Columna A</th>
+                <th>Columna B</th>
+            </tr>
+            <tr>
+                <td>A) GPU</td>
+                <td>1) Es el componente central que ejecuta los programas.</td>
+            </tr>
+            <tr>
+                <td>B) CPU</td>
+                <td>2) Procesa y muestra los gráficos.</td>
+            </tr>
+            <tr>
+                <td>C) RAM</td>
+                <td>3) Almacena datos temporalmente para su rápido acceso.</td>
+            </tr>
+        </table>
+
+        <button onclick="toggleRespuesta('respuesta9')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta9" style="display:none;"><b>Respuesta correcta:</b> A-2, B-1, C-3</p>
+
+<br>
+<hr>
+<br>
+
+<center><h4>Ejercicio de Análisis de Proceso</h4></center>
+        <p>Analiza el proceso de arranque de un sistema operativo y describe las etapas que se deben seguir.</p>
+        <button onclick="toggleRespuesta('respuesta10')">Mostrar respuesta(s) correcta(s)</button>
+        <p id="respuesta10" style="display:none;"><b>Respuesta correcta:</b> El proceso de arranque incluye: 1) Inicialización del BIOS, 2) Prueba de la memoria RAM, 3) Carga del sistema operativo desde el disco duro.</p>
+    </div>
+<div data-role="footer" data-position="fixed" data-theme="a">
+    <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+</div>
+</div>
+
+<script>
+    function toggleRespuesta(id) {
+        var respuesta = document.getElementById(id);
+        if (respuesta.style.display === 'block') {
+            respuesta.style.display = 'none';
+        } else {
+            respuesta.style.display = 'block';
+        }
+    }
+    
+</script>
+<script>
+    function mostrarRespuestas1() {
+        document.getElementById('respuesta1').style.display = 'block';
+    }
+    function mostrarRespuestas2() {
+        document.getElementById('respuesta2').style.display = 'block';
+    }
+    function mostrarRespuestas3() {
+        document.getElementById('respuesta3').style.display = 'block';
+    }
+    function mostrarRespuestas4() {
+        document.getElementById('respuesta4').style.display = 'block';
+    }
+    function mostrarRespuestas5() {
+        document.getElementById('respuesta5').style.display = 'block';
+    }
+    function mostrarRespuestas6() {
+        document.getElementById('respuesta6').style.display = 'block';
+    }
+    function mostrarRespuestas7() {
+        document.getElementById('respuesta7').style.display = 'block';
+    }
+    function mostrarRespuestas8() {
+        document.getElementById('respuesta8').style.display = 'block';
+    }
+    function mostrarRespuestas9() {
+        document.getElementById('respuesta9').style.display = 'block';
+    }
+    function mostrarRespuestas10() {
+        document.getElementById('respuesta10').style.display = 'block';
+    }
+</script>
+
+
+<div data-role="page" id="pag8">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a">  
+        <center>
+            <img src="img/8.jpg" style="border-radius: 5px; width: 360px;">
+            <h2>Tendencias Futuras en la Organización de Computadores</h2>  
+        </center> 
+        <p>La organización de computadores está en constante evolución, y las tendencias emergentes están marcando el camino hacia nuevas arquitecturas y tecnologías que mejorarán el rendimiento y la eficiencia de los sistemas informáticos.</p>
+
+        <h3>Principales Tendencias Emergentes:</h3>
+
+        <h4>1. Procesamiento en Paralelo</h4>
+        <p>El procesamiento en paralelo implica la ejecución simultánea de varias tareas para aumentar la velocidad de procesamiento. A medida que los procesadores multinúcleo se vuelven más comunes, el procesamiento paralelo está tomando protagonismo en aplicaciones como el análisis de grandes volúmenes de datos, inteligencia artificial y simulaciones científicas.</p>
+
+        <h4>2. Nuevas Formas de Memoria</h4>
+        <p>Las nuevas tecnologías de memoria, como la memoria 3D y la memoria basada en resistencias (ReRAM), están siendo desarrolladas para superar las limitaciones de la memoria tradicional (RAM). Estas innovaciones prometen mayores velocidades de acceso y mayor capacidad de almacenamiento, lo que beneficiará el rendimiento de los sistemas informáticos en general.</p>
+
+        <h4>3. Computación Cuántica</h4>
+        <p>La computación cuántica es un área emergente que aprovecha los principios de la mecánica cuántica para realizar cálculos de manera mucho más eficiente que los sistemas tradicionales. Aunque aún está en sus primeras etapas, la computación cuántica podría revolucionar áreas como la criptografía, la simulación de materiales y la inteligencia artificial.</p>
+
+        <h4>4. Arquitecturas de Memoria Unificada</h4>
+        <p>Las arquitecturas de memoria unificada buscan combinar la memoria del procesador y la memoria secundaria en un solo espacio. Esto permite una mayor flexibilidad y rendimiento en el acceso a datos, facilitando tareas como la computación en la nube y la virtualización.</p>
+
+        <h4>5. Inteligencia Artificial y Redes Neuronales</h4>
+        <p>La integración de la inteligencia artificial y las redes neuronales en los sistemas de computación está permitiendo la creación de máquinas más inteligentes que pueden aprender, adaptarse y realizar tareas complejas sin intervención humana directa. Esto tiene un impacto directo en el diseño de arquitecturas de computadoras que puedan optimizar y acelerar el procesamiento de estos algoritmos.</p>
+
+        <p>Estas tendencias están dando forma al futuro de la organización de computadores y redefiniendo cómo interactuamos con la tecnología. A medida que estos avances se implementen, es probable que veamos mejoras significativas en el rendimiento, la eficiencia y las capacidades de los sistemas informáticos en general.</p>
+
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+
+
+<div data-role="page" id="pag9">
+    <div data-role="header" data-theme="a">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#menu" data-icon="grid"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content" data-theme="a">  
+        <center>
+            <h2>Fuentes</h2>  
+        </center> 
+        <p>A continuación se presentan las fuentes utilizadas para la elaboración de este contenido:</p>
+
+        <h3>Fuente principal de todo el conocimiento usado en esta página:</h3>
+        <ul>
+            <li>Delgado G., Jeison M. (2024). Organización de Computadores. Universidad de Santander. URL: <a href="https://aulaextendida.udes.edu.co/pluginfile.php/832652/mod_resource/content/1/ORGANIZACIO%CC%81N%20DE%20COMPUTADORES%201.pdf" target="_blank">https://aulaextendida.udes.edu.co/pluginfile.php/832652/mod_resource/content/1/ORGANIZACIO%CC%81N%20DE%20COMPUTADORES%201.pdf</a></li>
+        </ul>
+
+        <h3>Fuentes en línea usadas para explicar cada ítem:</h3>
+        <ul>
+            <li><a href="https://github.com/lima-limon-inc/Maquina-Elemental-Abacus" target="_blank">Maquina Elemental Abacus - GitHub</a></li>
+            <li><a href="https://drive.google.com/file/d/1rz3_wATokWx7XaGZR4H13a8Iq0fjcuaz/view" target="_blank">Documento en Google Drive</a></li>
+            <li><a href="https://es.scribd.com/document/770641800/Mi-Resumen-Organizacion-del-Computador" target="_blank">Resumen de Organización del Computador en Scribd</a></li>
+            <li><a href="https://www.uv.mx/rrojano/arquitectura_uno/clase4-1.pdf" target="_blank">Clase 4-1 - Arquitectura de Computadores - Universidad Veracruzana</a></li>
+            <li><a href="https://hardzone.es/tutoriales/rendimiento/von-neumann-limitaciones/" target="_blank">Limitaciones de la arquitectura Von Neumann</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Memoria_principal" target="_blank">Memoria principal - Wikipedia</a></li>
+            <li><a href="https://www.ninjaone.com/es/it-hub/endpoint-management/que-es-la-memoria-principal-ram/" target="_blank">¿Qué es la memoria RAM? - NinjaOne</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Memoria_secundaria" target="_blank">Memoria secundaria - Wikipedia</a></li>
+            <li><a href="https://ed.team/comunidad/memoria-principal-y-secundaria" target="_blank">Memoria principal y secundaria - EdTeam</a></li>
+            <li><a href="https://edu.gcfglobal.org/es/cultura-tecnologica/medidas-de-almacenamiento-de-informacion/1/" target="_blank">Medidas de almacenamiento de información - GCFGlobal</a></li>
+            <li><a href="https://www.ibm.com/docs/es/storage-insights?topic=overview-units-measurement-storage-data" target="_blank">Unidades de medición de almacenamiento de datos - IBM</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Ciclo_de_instrucci%C3%B3n#:~:text=Un%20ciclo%20de%20instrucci%C3%B3n%20(tambi%C3%A9n,una%20instrucci%C3%B3n%20de%20lenguaje%20m%C3%A1quina." target="_blank">Ciclo de instrucción - Wikipedia</a></li>
+            <li><a href="https://hardzone.es/tutoriales/rendimiento/ciclo-instruccion-cpu/" target="_blank">Ciclo de instrucción en la CPU - HardZone</a></li>
+            <li><a href="https://www.fing.edu.uy/tecnoinf/mvd/cursos/arqcomp/material/teo/arq-teo06.pdf" target="_blank">Ciclo de instrucción - Universidad de la República (Uruguay)</a></li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <h4>William Felipe Melgarejo Vega - 01220371001 <br> Organización de Computadores</h4>
+    </div>
+</div>
+</body>
+</html>
